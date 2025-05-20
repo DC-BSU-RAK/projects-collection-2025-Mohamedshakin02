@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/infoLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Info">
+
+    <!-- Scrollable container with background image -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:fillViewport="true">
+
+        <!-- Main content is placed inside a ConstraintLayout -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".MainActivity">
+            <!-- Changed the font-family and font-color-->
+
+            <!-- User welcome message -->
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/brixton_sans"
+                android:text="Welcome,\nUser"
+                android:textAlignment="viewEnd"
+                android:textColor="#FFFFFF"
+                android:textSize="38sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageLogo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.832"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageLogo"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <!-- App logo -->
+            <ImageView
+                android:id="@+id/imageLogo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.078"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.109"
+                app:srcCompat="@drawable/logo" />
+
+            <!-- App name -->
+            <TextView
+                android:id="@+id/appName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/brixton_sans"
+                android:text="Cloth Care"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.108"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageLogo"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <!-- "About Cloth Care" heading -->
+            <TextView
+                android:id="@+id/aboutText"
+                android:layout_width="378dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kg_primary"
+                android:text="About Cloth Care:"
+                android:textColor="#FFFFFF"
+                android:textSize="38dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.787"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/userName"
+                app:layout_constraintVertical_bias="0.071" />
+
+            <!-- App description text -->
+            <TextView
+                android:id="@+id/appDescription"
+                android:layout_width="378dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kg_primary"
+                android:text="Cloth Care offers easy washing and ironing tips to keep your clothes looking great longer."
+                android:textColor="#FFFFFF"
+                android:textSize="32dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.787"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/aboutText"
+                app:layout_constraintVertical_bias="0.048" />
+
+            <!-- "How to Use" heading -->
+            <TextView
+                android:id="@+id/instructionHeading"
+                android:layout_width="378dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kg_primary"
+                android:text="How to Use:"
+                android:textColor="#FFFFFF"
+                android:textSize="38dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.787"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appDescription"
+                app:layout_constraintVertical_bias="0.115" />
+
+            <!-- Step-by-step instructions for using the app -->
+            <TextView
+                android:id="@+id/instructionText"
+                android:layout_width="378dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kg_primary"
+                android:text="1. Choose clothing type.\n2. Select fabric used.\n3. Pick tips you need (washing, ironing).\n4. Tap 'Show' to get your result."
+                android:textColor="#FFFFFF"
+                android:textSize="32dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.787"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/instructionHeading"
+                app:layout_constraintVertical_bias="0.048" />
+
+            <!-- Logout button -->
+            <Button
+                android:id="@+id/logoutButton"
+                android:layout_width="130dp"
+                android:layout_height="60dp"
+                android:backgroundTint="#f9e6a6"
+                android:fontFamily="@font/brixton_sans"
+                android:text="Logout"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/instructionText"
+                app:layout_constraintVertical_bias="0.643"
+                app:rippleColor="@color/selected_background_color" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout
+
+            >
+
+
+    </ScrollView>
+
+
+</FrameLayout>

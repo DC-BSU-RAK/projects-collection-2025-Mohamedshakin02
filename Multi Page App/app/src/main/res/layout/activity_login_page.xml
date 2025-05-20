@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".LoginPage">
+    <!-- Sets the background image -->
+    <!-- Changed the font-family and font-color-->
+
+    <!-- App logo image -->
+    <ImageView
+        android:id="@+id/imageLogo2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.187"
+        app:srcCompat="@drawable/logo" />
+
+    <!-- App welcome message -->
+    <TextView
+        android:id="@+id/appName2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/brixton_sans"
+        android:text="WELCOME TO\nCLOTH CARE!"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="34dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageLogo2"
+        app:layout_constraintVertical_bias="0.041" />
+
+    <!-- Username label -->
+    <TextView
+        android:id="@+id/userLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kg_primary"
+        android:text="USERNAME:"
+        android:textColor="#FFFFFF"
+        android:textSize="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.167"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appName2"
+        app:layout_constraintVertical_bias="0.207" />
+
+    <!-- Username input field -->
+    <EditText
+        android:id="@+id/userInput"
+        android:layout_width="169dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kg_primary"
+        android:layout_marginStart="20dp"
+        android:backgroundTint="#FFFFFF"
+        android:ems="10"
+        android:inputType="text"
+        android:textColor="#FFFFFF"
+        android:textSize="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/userLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/userLabel"
+        app:layout_constraintTop_toTopOf="@+id/userLabel"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <!-- Password label -->
+    <TextView
+        android:id="@+id/passwordLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kg_primary"
+        android:text="PASSWORD:"
+        android:textColor="#FFFFFF"
+        android:textSize="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userLabel"
+        app:layout_constraintVertical_bias="0.126" />
+
+    <!-- Password input field -->
+    <EditText
+        android:id="@+id/passwordInput"
+        android:layout_width="169dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kg_primary"
+        android:backgroundTint="#FFFFFF"
+        android:textColor="#FFFFFF"
+        android:ems="10"
+        android:textSize="32dp"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="@+id/passwordLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.304"
+        app:layout_constraintStart_toEndOf="@+id/passwordLabel"
+        app:layout_constraintTop_toTopOf="@+id/passwordLabel"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <!-- Login button -->
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#f9e6a6"
+        android:fontFamily="@font/brixton_sans"
+        android:text="Login"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordInput"
+        app:layout_constraintVertical_bias="0.827"
+        app:rippleColor="@color/selected_background_color" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
