@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Backgroud color of chip: sets background color to black when its selected, white when its no selected -->
+    <item android:color="#000000" android:state_checked="true" />
+    <item android:color="#FFFFFF" />
+</selector>

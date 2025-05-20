@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/homeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home">
+
+    <!-- Scrollable container with background image -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:fillViewport="true">
+
+        <!-- Main content is placed inside a ConstraintLayout -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".MainActivity">
+            <!-- Changed the font-family and font-color-->
+
+            <!-- User welcome message -->
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/brixton_sans"
+                android:text="Welcome,\nUser"
+                android:textAlignment="viewEnd"
+                android:textColor="#FFFFFF"
+                android:textSize="38sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageLogo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.831"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageLogo"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <!-- App logo -->
+            <ImageView
+                android:id="@+id/imageLogo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.078"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.079"
+                app:srcCompat="@drawable/logo" />
+
+            <!-- App name -->
+            <TextView
+                android:id="@+id/appName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/brixton_sans"
+                android:text="Cloth Care"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.108"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageLogo"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <!-- Slogan text -->
+            <TextView
+                android:id="@+id/sloganText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/brixton_sans"
+                android:text="Let’s Take Care of \nYour Clothes!"
+                android:textAlignment="center"
+                android:textColor="#F7E3A5"
+                android:textSize="42sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appName"
+                app:layout_constraintVertical_bias="0.046" />
+
+            <!-- TextView label for selecting cloth type -->
+            <TextView
+                android:id="@+id/clothTypeText"
+                android:layout_width="378dp"
+                android:layout_height="82dp"
+                android:fontFamily="@font/kg_primary"
+                android:text="Select a clothing item below to get care tips: "
+                android:textColor="#FFFFFF"
+                android:textSize="38dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.787"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sloganText"
+                app:layout_constraintVertical_bias="0.071" />
+
+            <!-- Container for clothing item buttons -->
+            <LinearLayout
+                android:id="@+id/clothingButtonColumn"
+                android:layout_width="371dp"
+                android:layout_height="625dp"
+                android:layout_marginBottom="50dp"
+                android:layout_marginTop="36dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.63"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clothTypeText"
+                app:layout_constraintVertical_bias="0.115"
+                tools:layout_editor_absoluteX="19dp">
+
+
+                <!-- Shirt button with icon -->
+                <LinearLayout
+                    android:id="@+id/shirt_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="@drawable/border"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:contentDescription="Shirt"
+                        android:src="@drawable/shirt_icon" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/kg_primary"
+                        android:text="Shirt"
+                        android:textColor="#000000"
+                        android:textSize="38dp" />
+                </LinearLayout>
+
+
+                <!-- T-Shirt button with icon -->
+                <LinearLayout
+                    android:id="@+id/tshirt_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="@drawable/border"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:contentDescription="T-shirt"
+                        android:src="@drawable/tshirt_icon" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/kg_primary"
+                        android:text="T-shirt"
+                        android:textColor="#000000"
+                        android:textSize="38dp" />
+                </LinearLayout>
+
+
+                <!-- Pant button with icon -->
+                <LinearLayout
+                    android:id="@+id/pant_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="@drawable/border"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:contentDescription="Pant"
+                        android:src="@drawable/pant_icon" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/kg_primary"
+                        android:text="Pant"
+                        android:textColor="#000000"
+                        android:textSize="38dp" />
+                </LinearLayout>
+
+
+                <!-- Jacket button with icon -->
+                <LinearLayout
+                    android:id="@+id/jacket_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="@drawable/border"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="horizontal"
+                    android:textSize="38dp">
+
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:contentDescription="Jacket"
+                        android:src="@drawable/jacket_icon" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/kg_primary"
+                        android:text="Jacket"
+                        android:textColor="#000000"
+                        android:textSize="38dp" />
+                </LinearLayout>
+
+
+                <!-- Hoodie button with icon -->
+                <LinearLayout
+                    android:id="@+id/hoodie_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/border"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:contentDescription="Hoodie"
+                        android:src="@drawable/hoodie_icon" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/kg_primary"
+                        android:text="Hoodie"
+                        android:textColor="#000000"
+                        android:textSize="38dp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+
+</FrameLayout>

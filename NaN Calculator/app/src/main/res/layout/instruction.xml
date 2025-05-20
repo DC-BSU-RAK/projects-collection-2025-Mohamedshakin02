@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/border"
+    tools:context=".InstructionActivity">
+    <!-- Set the background image -->
+
+    <!-- TextView label for instruction heading -->
+    <!-- Changed the font-family and font-color-->
+    <TextView
+        android:id="@+id/instructionName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/merriweather"
+        android:text="Instruction"
+        android:textColor="#036938"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.093" />
+
+    <!-- TextView label for app description -->
+    <!-- Changed the font-family and font-color-->
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/merriweather"
+        android:text="Green Combo helps you find the best crop-soil combination for agriculture."
+        android:textColor="#000000"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructionName"
+        app:layout_constraintVertical_bias="0.065" />
+
+    <!-- TextView label for instructions -->
+    <!-- Changed the font-family and font-color-->
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/merriweather"
+        android:text="• Select a Soil Type from the first chip (e.g., Alluvial, Black, Red).\n\n• Select a Crop Type from the second chip (e.g., Grain, Fruit, Vegetable).\n\n• Tap &quot;Generate&quot; to see a recommended crop and useful farming information based on your selection."
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.099" />
+
+    <!-- Close Button placed at the bottom -->
+    <!-- Changed the font-family and background color -->
+    <Button
+        android:id="@+id/closeButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:backgroundTint="#036A38"
+        android:fontFamily="@font/merriweather"
+        android:text="Close"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.637" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

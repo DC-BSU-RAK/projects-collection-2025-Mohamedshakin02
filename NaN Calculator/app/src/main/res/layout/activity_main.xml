@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+    <!-- Sets the background image -->
+
+    <!-- App Logo placed at the top center -->
+    <ImageView
+        android:id="@+id/Logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.133"
+        app:srcCompat="@drawable/logo" />
+
+    <!-- Instruction button placed to the right of the logo -->
+    <ImageButton
+        android:id="@+id/instructionButton"
+        android:layout_width="60dp"
+        android:layout_height="55dp"
+        android:backgroundTint="#036A38"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/Logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.65"
+        app:layout_constraintStart_toEndOf="@+id/Logo"
+        app:layout_constraintTop_toTopOf="@+id/Logo"
+        app:layout_constraintVertical_bias="0.65"
+        app:srcCompat="@drawable/info" />
+
+    <!-- TextView label for selecting soil type -->
+    <!-- Changed the font-family and font-color-->
+    <TextView
+        android:id="@+id/soilText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:fontFamily="@font/merriweather"
+        android:text="Select Soil Type:"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.238"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.215"
+        app:singleSelection="true" />
+
+    <!-- ChipGroup for selecting soil types -->
+    <!-- Allows only one chip to be selected at a time within this ChipGroup -->
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroupSoilTypes"
+        android:layout_width="350dp"
+        android:layout_height="130dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.852"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/soilText"
+        app:layout_constraintVertical_bias="0.025"
+        app:singleSelection="true">
+
+        <!-- Individual soil type chips -->
+        <com.google.android.material.chip.Chip
+            android:id="@+id/alluvialSoil"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:checkable="true"
+            android:textAppearance="@style/CustomChipTextStyle"
+            android:text="Alluvial"
+            android:textAllCaps="false"
+            android:textColor="@color/chip_text_color"
+            app:checkedIconVisible="true"
+            app:chipBackgroundColor="@color/chip_selector"
+            app:chipCornerRadius="24dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/blackSoil"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:checkable="true"
+            android:text="Black"
+            android:textAppearance="@style/CustomChipTextStyle"
+            android:textColor="@color/chip_text_color"
+            app:checkedIconVisible="true"
+            app:chipBackgroundColor="@color/chip_selector"
+            app:chipCornerRadius="24dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/redSoil"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:checkable="true"
+            android:text="Red"
+            android:textColor="@color/chip_text_color"
+            android:textAppearance="@style/CustomChipTextStyle"
+            app:checkedIconVisible="true"
+            app:chipBackgroundColor="@color/chip_selector"
+            app:chipCornerRadius="24dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/lateriteSoil"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:checkable="true"
+            android:text="Laterite"
+            android:textColor="@color/chip_text_color"
+            android:textAppearance="@style/CustomChipTextStyle"
+            app:checkedIconVisible="true"
+            app:chipBackgroundColor="@color/chip_selector"
+            app:chipCornerRadius="24dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/sandySoil"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:checkable="true"
+            android:text="Sandy"
+            android:textAppearance="@style/CustomChipTextStyle"
+            android:textColor="@color/chip_text_color"
+            app:checkedIconVisible="true"
+            app:chipBackgroundColor="@color/chip_selector"
+            app:chipCornerRadius="24dp" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <!-- TextView label for selecting crop type -->
+    <TextView
+        android:id="@+id/cropText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/merriweather"
+        android:text="Select Crop Type:"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.252"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chipGroupSoilTypes"
+        app:layout_constraintVertical_bias="0.083" />
+
+    <!-- ChipGroup for selecting crop types -->
+    <!-- Allows only one chip to be selected at a time within this ChipGroup -->
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroupCropTypes"
+        android:layout_width="350dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="52dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cropText"
+        app:layout_constraintVertical_bias="0.057"
+        app:singleSelection="true">
+
+        <!-- Individual crop type chips -->
+        <!-- Text color of chip is defined in res/color/chip_text_color.xml -->
+        <!-- Background color of chip is defined in res/color/chip_selector.xml -->
+        <com.google.android.material.chip.Chip
+            android:id="@+id/grainCrop"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:text="Grain"
+            android:textAppearance="@style/CustomChipTextStyle"
+            app:chipCornerRadius="24dp"
+            android:checkable="true"
+            app:checkedIconVisible="true"
+            app:chipBackgroundColor="@color/chip_selector"
+            android:textColor="@color/chip_text_color"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/fruitCrop"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:text="Fruit"
+            android:textAppearance="@style/CustomChipTextStyle"
+            app:chipCornerRadius="24dp"
+            android:checkable="true"
+            app:checkedIconVisible="true"
+            app:chipBackgroundColor="@color/chip_selector"
+            android:textColor="@color/chip_text_color"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/vegetableCrop"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:text="Vegetable"
+            android:textAppearance="@style/CustomChipTextStyle"
+            app:chipCornerRadius="24dp"
+            android:checkable="true"
+            app:checkedIconVisible="true"
+            app:chipBackgroundColor="@color/chip_selector"
+            android:textColor="@color/chip_text_color"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/pulsesCrop"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:text="Pulses"
+            android:textAppearance="@style/CustomChipTextStyle"
+            app:chipCornerRadius="24dp"
+            android:checkable="true"
+            app:checkedIconVisible="true"
+            app:chipBackgroundColor="@color/chip_selector"
+            android:textColor="@color/chip_text_color"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/spicesCrop"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:text="Spices"
+            android:textAppearance="@style/CustomChipTextStyle"
+            app:chipCornerRadius="24dp"
+            android:checkable="true"
+            app:checkedIconVisible="true"
+            app:chipBackgroundColor="@color/chip_selector"
+            android:textColor="@color/chip_text_color"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/oilseedsCrop"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:text="Oilseeds"
+            android:textAppearance="@style/CustomChipTextStyle"
+            app:chipCornerRadius="24dp"
+            android:checkable="true"
+            app:checkedIconVisible="true"
+            app:chipBackgroundColor="@color/chip_selector"
+            android:textColor="@color/chip_text_color"/>
+    </com.google.android.material.chip.ChipGroup>
+
+    <!-- Generate Button placed at the bottom -->
+    <!-- Changed the font-family and background color -->
+    <Button
+        android:id="@+id/resultButton"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginBottom="4dp"
+        android:backgroundTint="#FDBF30"
+        android:fontFamily="@font/merriweather"
+        android:text="Generate"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chipGroupCropTypes"
+        app:layout_constraintVertical_bias="0.635" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
