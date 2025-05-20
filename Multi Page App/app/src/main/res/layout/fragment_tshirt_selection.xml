@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/t_shirtLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".TshirtSelection">
+    <!-- T-Shirt selection fragment -->
+    <!-- Sets the background image -->
+    <!-- Changed the font-family and font-color-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <!-- Back button -->
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="#00FCF5FD"
+            android:scaleType="fitXY"
+            android:src="@drawable/back_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.03"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.1" />
+
+        <!-- Fabric Selection Title -->
+        <TextView
+            android:id="@+id/textFabricTitle"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kg_primary"
+            android:text="Select Fabric Type:"
+            android:textColor="#FFFFFF"
+            android:textSize="38dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/backButton"
+            app:layout_constraintVertical_bias="0.05" />
+
+        <!-- Fabric Chipgroup -->
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupFabricTypes"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.344"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textFabricTitle"
+            app:layout_constraintVertical_bias="0.036"
+            app:singleSelection="true">
+
+            <!-- Individual fabric type chips -->
+            <com.google.android.material.chip.Chip
+                android:id="@+id/cottonFabric"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:checkable="true"
+                android:text="Cotton"
+                android:textAllCaps="false"
+                android:textAppearance="@style/CustomChipTextStyle"
+                android:textColor="@color/chip_text_color"
+                app:checkedIconVisible="true"
+                app:chipBackgroundColor="@color/chip_background_color"
+                app:chipCornerRadius="24dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/polyesterFabric"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:checkable="true"
+                android:text="Polyester"
+                android:textAppearance="@style/CustomChipTextStyle"
+                android:textColor="@color/chip_text_color"
+                app:checkedIconVisible="true"
+                app:chipBackgroundColor="@color/chip_background_color"
+                app:chipCornerRadius="24dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/cottonPolyesterFabric"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:checkable="true"
+                android:text="Cotton-Polyester Blend"
+                android:textAppearance="@style/CustomChipTextStyle"
+                android:textColor="@color/chip_text_color"
+                app:checkedIconVisible="true"
+                app:chipBackgroundColor="@color/chip_background_color"
+                app:chipCornerRadius="24dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/rayonFabric"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:checkable="true"
+                android:text="Linen"
+                android:textAppearance="@style/CustomChipTextStyle"
+                android:textColor="@color/chip_text_color"
+                android:textSize="28sp"
+                app:checkedIconVisible="true"
+                app:chipBackgroundColor="@color/chip_background_color"
+                app:chipCornerRadius="24dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/flannelFabric"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:checkable="true"
+                android:text="Rayon"
+                android:textAppearance="@style/CustomChipTextStyle"
+                android:textColor="@color/chip_text_color"
+                app:checkedIconVisible="true"
+                app:chipBackgroundColor="@color/chip_background_color"
+                app:chipCornerRadius="24dp" />
+
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <!-- Care Selection Title -->
+        <TextView
+            android:id="@+id/textCareTitle"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kg_primary"
+            android:text="Select All Applicable Care Instructions:"
+            android:textColor="#FFFFFF"
+            android:textSize="38dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chipGroupFabricTypes"
+            app:layout_constraintVertical_bias="0.15" />
+
+        <!-- Care instruction Chipgroup -->
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupInstructionRequirement"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.344"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textCareTitle"
+            app:layout_constraintVertical_bias="0.036">
+
+            <!-- Individual care instruction chips -->
+            <com.google.android.material.chip.Chip
+                android:id="@+id/wash"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:checkable="true"
+                android:text="Washing"
+                android:textAllCaps="false"
+                android:textAppearance="@style/CustomChipTextStyle"
+                android:textColor="@color/chip_text_color"
+                app:checkedIconVisible="true"
+                app:chipBackgroundColor="@color/chip_background_color"
+                app:chipCornerRadius="24dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/iron"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:checkable="true"
+                android:text="Ironing"
+                android:textAppearance="@style/CustomChipTextStyle"
+                android:textColor="@color/chip_text_color"
+                app:checkedIconVisible="true"
+                app:chipBackgroundColor="@color/chip_background_color"
+                app:chipCornerRadius="24dp" />
+
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <!-- Button to show result -->
+        <Button
+            android:id="@+id/showButton"
+            android:layout_width="140dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="128dp"
+            android:layout_marginTop="130dp"
+            android:backgroundTint="#f9e6a6"
+            android:fontFamily="@font/brixton_sans"
+            android:text="Show"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chipGroupInstructionRequirement"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
